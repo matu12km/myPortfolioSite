@@ -1,14 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import Title from '../Title/Title';
+import Title from '../components/Title/Title';
 
 const Thanks = () => (
-  <section id="contact">
+  <section id="ThanksPage">
     <Container>
-      <Title title="Contact" />
+      <Title title="お問い合わせ承りました。" />
       <Row className="justify-content-center">
         <Col md="7">
-          <h1>お問い合わせ承りました。</h1>
           <p>
             この度はお問い合わせいただきありがとうございます。
             <br />
