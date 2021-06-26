@@ -22,7 +22,7 @@ export default function ContactForm() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...state }),
     })
-      .then(() => setShow(true))
+      .then(() => alert('success'))
       .catch((error) => alert(error));
 
     e.preventDefault();
