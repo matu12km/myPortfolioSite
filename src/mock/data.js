@@ -10,7 +10,7 @@ export const headData = {
 // HERO DATA
 export const heroData = {
   title: '',
-  name: 'Matsuzawa Kazukitest',
+  name: 'Matsuzawa Kazuki',
   subtitle: 'aaa',
   cta: '',
 };
@@ -107,12 +107,6 @@ export const skillsData = [
     level: 5,
   },
 ];
-// CONTACT DATA
-export const contactData = {
-  cta: '',
-  btn: '',
-  email: '',
-};
 
 // FOOTER DATA
 export const footerData = {
