@@ -14,6 +14,7 @@ const Projects = () => {
   const [imgTitle, setImageTitle] = useState(null);
   const [textInfo, setTextInfo] = useState(null);
   const [urlSite, setUrlSite] = useState(null);
+  const [loadIndex, setLoadIndex] = useState(3);
 
   const handleClose = () => setModalShow(false);
 
@@ -24,6 +25,18 @@ const Projects = () => {
     setModalShow(true);
     setTextInfo(info);
     setUrlSite(url);
+  };
+
+  const displayMore = () => {
+    if (loadIndex < projects.length) {
+      setLoadIndex(loadIndex + 3);
+    }
+  };
+
+  const displayClose = () => {
+    if (loadIndex > 3) {
+      setLoadIndex(loadIndex - 3);
+    }
   };
 
   useEffect(() => {
@@ -41,8 +54,8 @@ const Projects = () => {
       <Container>
         <Title title="projects" />
         <Row className="projects-wrapper">
-          {projects.map((project) => (
-            <Col key={project.id} lg={4} sm={6}>
+          {projects.slice(0, loadIndex).map((project) => (
+            <Col key={project.id} lg={4} sm={6} className="mb-4">
               <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
                 <a
                   className="projectBox"
@@ -71,6 +84,20 @@ const Projects = () => {
             </Modal.Footer>
           </Modal>
         </Row>
+        {projects.length > 3 && loadIndex !== projects.length ? (
+          <Button onClick={displayMore} variant="secondary">
+            さらに表示
+          </Button>
+        ) : (
+          ''
+        )}
+        {loadIndex > 3 ? (
+          <Button onClick={displayClose} variant="secondary">
+            表示を減らす
+          </Button>
+        ) : (
+          ''
+        )}
       </Container>
     </section>
   );

@@ -49,6 +49,48 @@ export const projectsData = [
     info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
     url: '#',
   },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'このサイト1',
+    info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
+    url: '#',
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'このサイト2',
+    info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
+    url: '#',
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'このサイト3',
+    info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
+    url: '#',
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'このサイト4',
+    info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
+    url: '#',
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'このサイト5',
+    info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
+    url: '#',
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'このサイト6',
+    info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
+    url: '#',
+  },
 ];
 // SKILLS DATA
 export const skillsData = [
@@ -114,12 +156,12 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'twitter',
-      url: '',
+      url: 'https://twitter.com/matu_engineer',
+    },
+    {
+      id: nanoid(),
+      name: 'instagram',
+      url: 'https://www.instagram.com/k_matu12/?hl=ja',
     },
   ],
-};
-
-// Github start/fork buttons
-export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
 };
