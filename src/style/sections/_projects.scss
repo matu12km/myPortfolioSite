@@ -25,6 +25,33 @@
     }
     .projectBox {
       cursor: pointer;
+      .projectImgBox {
+        position: relative;
+        &:hover {
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          transform: translateY(-5px);
+          transition-duration: 0.5s;
+        }
+        p {
+          position: absolute;
+          top: 0;
+          color: rgb(241, 241, 241);
+          background-color: rgba(41, 41, 41, 0.7);
+          margin: 1rem;
+          padding: 0.3rem;
+          font-size: 1rem;
+          border-radius: 3px;
+        }
+        h4 {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          color: rgb(241, 241, 241);
+          background-color: rgba(41, 41, 41, 0.7);
+          margin: 0;
+          padding: 1rem;
+        }
+      }
     }
 
     &__text {
@@ -39,40 +66,12 @@
 
       &-title {
         font-weight: bold;
-        margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
+        margin-bottom: 1rem;
+        font-size: $default-font-size;
+        color: $dark-grey;
 
         @include respond(phone) {
-          font-size: 2rem;
-        }
-      }
-
-      & p > a {
-        color: $secondary-color;
-      }
-    }
-
-    &__image {
-      width: 90%;
-      margin: 0 auto;
-
-      @include respond(tab-land) {
-        width: 100%;
-        margin: 0;
-      }
-
-      & .thumbnail {
-        border: none;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        transition: all 0.2s ease-out;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
-          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-
-        @include respond(phone) {
-          border: 1px solid #d2d2d2;
-          box-shadow: none;
-          margin-bottom: 3.2rem;
+          font-size: 1rem;
         }
       }
     }

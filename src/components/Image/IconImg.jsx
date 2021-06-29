@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const IconImg = ({ filename, alt }) => (
+const IconImg = ({ className, iconname, alt, width, height }) => (
   <StaticQuery
     query={graphql`
       {
@@ -17,19 +17,32 @@ const IconImg = ({ filename, alt }) => (
       }
     `}
     render={(data) => {
-      const image = data.iconsSvg.edges.find((n) => n.node.relativePath.includes(filename));
+      const image = data.iconsSvg.edges.find((n) => n.node.relativePath.includes(iconname));
 
       if (!image) return null;
 
       const imageFluid = image.node.publicURL;
-      return <img src={imageFluid} alt={alt} width={30} height={30} />;
+      return (
+        <object
+          id={alt}
+          className={className}
+          type="image/svg+xml"
+          data={imageFluid}
+          width={width}
+          height={height}
+          aria-label={alt}
+        />
+      );
     }}
   />
 );
 
 IconImg.propTypes = {
-  filename: PropTypes.string,
+  iconname: PropTypes.string,
   alt: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  className: PropTypes.string,
 };
 
 export default IconImg;

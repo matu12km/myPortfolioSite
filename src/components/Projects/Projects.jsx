@@ -4,6 +4,7 @@ import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+import IconImg from '../Image/IconImg';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -52,10 +53,10 @@ const Projects = () => {
   return (
     <section id="projects">
       <Container>
-        <Title title="projects" />
+        <Title title="制作物" />
         <Row className="projects-wrapper">
           {projects.slice(0, loadIndex).map((project) => (
-            <Col key={project.id} lg={4} sm={6} className="mb-4">
+            <Col key={project.id} lg={4} sm={6} className="projectImg mb-4">
               <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
                 <a
                   className="projectBox"
@@ -64,35 +65,60 @@ const Projects = () => {
                     handleShow(e, project.img, project.title, project.info, project.url)
                   }
                 >
-                  <ProjectImg alt={project.title} filename={project.img} />
+                  <ProjectImg
+                    className="thumbnail"
+                    alt={project.title}
+                    filename={project.img}
+                    category={project.category}
+                    title={project.title}
+                  />
                 </a>
               </Fade>
             </Col>
           ))}
           <Modal show={modalShow} onHide={handleClose}>
-            <Modal.Header closeButton>
+            <Modal.Header>
               <Modal.Title>{imgTitle}</Modal.Title>
+              <Button variant="light" onClick={handleClose}>
+                <IconImg
+                  iconname="x-lg.svg"
+                  alt="close"
+                  width={20}
+                  height={20}
+                  aria-hidden="true"
+                />
+              </Button>
             </Modal.Header>
             <Modal.Body>
               <ProjectImg alt={imgTitle} filename={urlImage} />
               <p>{textInfo}</p>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" href={urlSite}>
+              <Button variant="secondary" href={urlSite} className="shadow-lg">
                 サイトを見る
               </Button>
             </Modal.Footer>
           </Modal>
         </Row>
         {projects.length > 3 && loadIndex !== projects.length ? (
-          <Button onClick={displayMore} variant="secondary">
+          <Button
+            className="cta-btn--resume m-3 shadow-lg"
+            size="lg"
+            onClick={displayMore}
+            variant="secondary"
+          >
             さらに表示
           </Button>
         ) : (
           ''
         )}
         {loadIndex > 3 ? (
-          <Button onClick={displayClose} variant="secondary">
+          <Button
+            className="cta-btn m-3 shadow-lg"
+            size="lg"
+            onClick={displayClose}
+            variant="secondary"
+          >
             表示を減らす
           </Button>
         ) : (

@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const ProjectImg = ({ filename, alt }) => (
+const ProjectImg = ({ filename, alt, category, title }) => (
   <StaticQuery
     query={graphql`
       {
@@ -26,7 +26,13 @@ const ProjectImg = ({ filename, alt }) => (
       if (!image) return null;
 
       const imageFluid = image.node.childImageSharp.gatsbyImageData;
-      return <GatsbyImage image={imageFluid} alt={alt} />;
+      return (
+        <div className="projectImgBox">
+          <GatsbyImage image={imageFluid} alt={alt} />
+          <p>{category}</p>
+          <h4>{title}</h4>
+        </div>
+      );
     }}
   />
 );
@@ -34,6 +40,8 @@ const ProjectImg = ({ filename, alt }) => (
 ProjectImg.propTypes = {
   filename: PropTypes.string,
   alt: PropTypes.string,
+  category: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default ProjectImg;

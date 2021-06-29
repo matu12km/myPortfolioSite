@@ -1,4 +1,29 @@
 module.exports = {
+  siteMetadata: {
+    title: 'Matsuzawa Portfolio',
+    menuLinks: [
+      {
+        name: 'hero',
+        link: '/#hero',
+      },
+      {
+        name: 'About',
+        link: '/#about',
+      },
+      {
+        name: 'Projects',
+        link: '/#projects',
+      },
+      {
+        name: 'Skills',
+        link: '/#skills',
+      },
+      {
+        name: 'Contact',
+        link: '/#contact',
+      },
+    ],
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
