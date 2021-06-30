@@ -32,7 +32,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-image`,
     `gatsby-plugin-fontawesome-css`,
-    `gatsby-plugin-preact`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
     {
