@@ -10,6 +10,7 @@ const Navigation = () => (
           siteMetadata {
             title
             menuLinks {
+              id
               link
               name
             }
@@ -25,10 +26,12 @@ const Navigation = () => (
           <Container>
             <Navbar.Brand href="/">{title}</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+              <Nav className="mr-auto">
                 {links.map((menulink) => (
-                  <Nav.Link href={menulink.link}>{menulink.name}</Nav.Link>
+                  <Nav.Link className="mr-1" key={menulink.id} href={menulink.link}>
+                    {menulink.name}
+                  </Nav.Link>
                 ))}
               </Nav>
             </Navbar.Collapse>

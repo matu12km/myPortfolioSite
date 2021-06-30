@@ -3,23 +3,23 @@ module.exports = {
     title: 'Matsuzawa Portfolio',
     menuLinks: [
       {
-        name: 'hero',
-        link: '/#hero',
-      },
-      {
-        name: 'About',
+        id: 'about',
+        name: '自己紹介',
         link: '/#about',
       },
       {
-        name: 'Projects',
+        id: 'projects',
+        name: '制作物',
         link: '/#projects',
       },
       {
-        name: 'Skills',
+        id: 'skills',
+        name: 'スキル',
         link: '/#skills',
       },
       {
-        name: 'Contact',
+        id: 'contact',
+        name: 'お問い合わせ',
         link: '/#contact',
       },
     ],
@@ -32,6 +32,9 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-image`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-preact`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -56,13 +59,42 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Matsuzawa Portfolio`,
+        short_name: `Matsufolio`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#02aab0`,
-        display: `standalone`,
+        display: `minimal-ui`,
         icon: 'src/images/favicon.png',
+        icon_options: {
+          purpose: `any maskable`,
+        },
+        icons: [
+          {
+            src: `src/images/favicon.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/favicon.png`,
+            sizes: `256x256`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `/`,
+        stripQueryString: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: `/`,
+        sitemap: `/sitemap.xml`,
       },
     },
   ],

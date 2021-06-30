@@ -12,7 +12,7 @@ const Skills = () => {
   return (
     <section id="skills">
       <Container>
-        <Title title="Skills" />
+        <Title title="スキル" englishtile="Skills" />
         <Fade bottom duration={1000}>
           <Row className="skills-wrapper">
             {skills.map((skill) => {

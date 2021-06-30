@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "gatsby-one-page-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "It's a simple one-page site.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -21,7 +21,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "bootstrap": "^5.0.2",
-    "gatsby": "^3.8.0",
+    "gatsby": "^3.8.1",
     "gatsby-image": "^3.8.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-image": "^1.8.0",
@@ -58,7 +58,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.2"
   },
   "repository": {
     "type": "git",

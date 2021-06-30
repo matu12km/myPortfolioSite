@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <Container>
-        <Title title="Contact" />
+        <Title title="お問い合わせ" englishtile="Contact" />
         <Row className="justify-content-center">
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
             <Col md="7" className="mx-auto">
@@ -34,16 +34,16 @@ const Contact = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="bot-field" />
                 <Form.Group controlId="formGroupName" className="mb-4">
-                  <Form.Label className="h3">お名前</Form.Label>
+                  <Form.Label className="h4">お名前</Form.Label>
                   <Form.Control required size="lg" type="text" name="name" />
                 </Form.Group>
                 <Form.Group controlId="formGroupEmail" className="mb-4">
-                  <Form.Label className="h3">メールアドレス</Form.Label>
+                  <Form.Label className="h4">メールアドレス</Form.Label>
                   <Form.Control required size="lg" type="email" name="email" />
                 </Form.Group>
                 <Form.Group controlId="formGroupMessage" className="mb-4">
-                  <Form.Label className="h3">お問い合わせ内容</Form.Label>
-                  <Form.Control required as="textarea" rows={5} name="message" />
+                  <Form.Label className="h4">お問い合わせ内容</Form.Label>
+                  <Form.Control required size="lg" as="textarea" rows={5} name="message" />
                 </Form.Group>
                 <div className="d-grid gap-2">
                   <Button variant="primary" type="submit" size="lg">

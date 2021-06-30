@@ -30,18 +30,23 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'mtfarmSite.jpg',
     title: '株式会社Mt.ファームわかとち',
     category: 'WEBサイト制作',
     info: '株式会社Mt.ファームわかとち様のWEBサイトを制作しました。WordPressにて作成し、保守管理をしていました。',
+    language: 'PHP, JavaScript, Jquery, CSS, HTML, SASS',
+    framework: 'Bootstrap',
+    other: 'WordPress',
     url: 'https://wakatochi.jp',
   },
   {
     id: nanoid(),
-    img: 'profile.jpg',
+    img: 'okkonokiSite.jpg',
     title: '古民家民宿おっこの木',
     category: 'WEBサイト制作',
     info: '「古民家民宿おっこの木」様のWEBサイトを制作しました。WordPressにて作成し、保守管理をしていました。',
+    language: 'PHP, JavaScript, Jquery, CSS, HTML, SASS',
+    other: 'WordPress',
     url: 'https://okkonoki.wakatochi.jp',
   },
   {
@@ -49,7 +54,10 @@ export const projectsData = [
     img: 'project.jpg',
     title: 'このサイト',
     category: 'WEBサイト制作',
-    info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
+    info: 'Gatsbyという静的サイトジェネレーターを使い作成。ホスティングはNetlifyを使用。',
+    language: 'JavaScript, CSS, HTML, SASS',
+    framework: 'React, Bootstrap',
+    other: 'Gatsby',
     url: '#',
   },
   {

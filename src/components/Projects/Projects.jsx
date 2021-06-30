@@ -4,7 +4,7 @@ import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
-import IconImg from '../Image/IconImg';
+import FontIcon from '../Image/FontAwesomeIcon';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -14,18 +14,24 @@ const Projects = () => {
   const [urlImage, setUrlImage] = useState(null);
   const [imgTitle, setImageTitle] = useState(null);
   const [textInfo, setTextInfo] = useState(null);
+  const [textLang, setLanguage] = useState(null);
+  const [textFrame, setFramework] = useState(null);
+  const [textOther, setOther] = useState(null);
   const [urlSite, setUrlSite] = useState(null);
   const [loadIndex, setLoadIndex] = useState(3);
 
   const handleClose = () => setModalShow(false);
 
-  const handleShow = (e, src, title, info, url) => {
+  const handleShow = (e, src, title, info, lang, framework, other, url) => {
     e.preventDefault();
     setUrlImage(src);
     setImageTitle(title);
     setModalShow(true);
     setTextInfo(info);
     setUrlSite(url);
+    setLanguage(lang);
+    setFramework(framework);
+    setOther(other);
   };
 
   const displayMore = () => {
@@ -53,7 +59,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <Container>
-        <Title title="制作物" />
+        <Title title="制作物" englishtile="Projects" />
         <Row className="projects-wrapper">
           {projects.slice(0, loadIndex).map((project) => (
             <Col key={project.id} lg={4} sm={6} className="projectImg mb-4">
@@ -62,7 +68,16 @@ const Projects = () => {
                   className="projectBox"
                   href={project.src}
                   onClick={(e) =>
-                    handleShow(e, project.img, project.title, project.info, project.url)
+                    handleShow(
+                      e,
+                      project.img,
+                      project.title,
+                      project.info,
+                      project.language,
+                      project.framework,
+                      project.other,
+                      project.url
+                    )
                   }
                 >
                   <ProjectImg
@@ -80,18 +95,15 @@ const Projects = () => {
             <Modal.Header>
               <Modal.Title>{imgTitle}</Modal.Title>
               <Button variant="light" onClick={handleClose}>
-                <IconImg
-                  iconname="x-lg.svg"
-                  alt="close"
-                  width={20}
-                  height={20}
-                  aria-hidden="true"
-                />
+                <FontIcon iconstyle="fas" iconname="times" className="close-btn" />
               </Button>
             </Modal.Header>
             <Modal.Body>
               <ProjectImg alt={imgTitle} filename={urlImage} />
-              <p>{textInfo}</p>
+              <p className="text-start">{textInfo}</p>
+              <p className="text-start">開発言語：{textLang}</p>
+              <p className="text-start">フレームワーク：{textFrame}</p>
+              <p className="text-start">その他ツール等：{textOther}</p>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" href={urlSite} className="shadow-lg">
