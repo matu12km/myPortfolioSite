@@ -1,7 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: 'Matsuzawa Portfolio',
+    author: {
+      name: 'Matsuzawa',
+    },
+    description: 'マツザワのポートフォリオサイトです。',
     siteUrl: 'http://localhost:8000',
+    social: {
+      twitter: 'matu_engineer',
+      instagram: 'k_matu12',
+    },
     menuLinks: [
       {
         id: 'about',
@@ -26,14 +34,13 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-fontawesome-css`,
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-image',
+    'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-source-filesystem`,
@@ -100,6 +107,28 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://www.example.com`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/*.html': ['cache-control: public, max-age=0, must-revalidate'],
+          '/page-data/**/app-data.json': ['cache-control: public, max-age=0, must-revalidate'],
+          '/page-data/*': ['cache-control: public, max-age=0, must-revalidate'],
+          '/static/*': ['cache-control: public, max-age=31536000, immutable'],
+          '/icons/*': ['cache-control: public, max-age=31536000, immutable'],
+          '/media/*': ['cache-control: public, max-age=31536000, immutable'],
+          '/sw.js': ['cache-control: public, max-age=0, must-revalidate'],
+          '/**/*.js': ['cache-control: public, max-age=31536000, immutable'],
+          '/**/*.css': ['cache-control: public, max-age=31536000, immutable'],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-lodash`,
+      options: {
+        disabledFeatures: [`shorthands`, `cloning`],
       },
     },
   ],
