@@ -17,7 +17,7 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.webp',
+  img: 'profile.jpg',
   paragraphOne:
     '新潟県の田舎WEBエンジニアです。PHP、javascript(Vue.js,React)、VB、VBAなどなどつまみ食いしています。',
   paragraphTwo: '2年と少しシステムエンジニアとして、VB、VBA、C#を主に使っていました。',

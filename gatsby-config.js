@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Matsuzawa Portfolio',
+    siteUrl: 'http://localhost:8000',
     menuLinks: [
       {
         id: 'about',
@@ -33,7 +34,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-webpack-bundle-analyser-v2`,
+    'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -90,10 +91,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
-        host: `/`,
-        sitemap: `/sitemap.xml`,
+        devMode: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.example.com`,
       },
     },
   ],
