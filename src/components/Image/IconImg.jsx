@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const IconImg = ({ className, iconname, alt, width, height }) => (
   <StaticQuery
@@ -23,14 +24,13 @@ const IconImg = ({ className, iconname, alt, width, height }) => (
 
       const imageFluid = image.node.publicURL;
       return (
-        <object
+        <GatsbyImage
           id={alt}
           className={className}
-          type="image/svg+xml"
-          data={imageFluid}
+          image={imageFluid}
           width={width}
           height={height}
-          aria-label={alt}
+          alt={alt}
         />
       );
     }}
