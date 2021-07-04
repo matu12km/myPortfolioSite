@@ -82,7 +82,7 @@ export const projectsData = [
     title: 'このサイト3',
     category: 'WEBサイト制作',
     info: '以前から気になっていたgatsbyを使い作成。ホスティングはgithub Page',
-    url: '#',
+    url: 'https://matsuzawa.dev/',
   },
   {
     id: nanoid(),

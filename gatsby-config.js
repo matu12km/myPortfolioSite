@@ -5,7 +5,7 @@ module.exports = {
       name: 'Matsuzawa',
     },
     description: 'マツザワのポートフォリオサイトです。',
-    siteUrl: 'http://localhost:8000',
+    siteUrl: 'https://matsuzawa.dev/',
     social: {
       twitter: 'matu_engineer',
       instagram: 'k_matu12',
@@ -93,7 +93,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `/`,
+        siteUrl: `https://matsuzawa.dev/`,
         stripQueryString: true,
       },
     },
@@ -106,7 +106,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.example.com`,
+        siteUrl: `https://matsuzawa.dev/`,
       },
     },
     {
