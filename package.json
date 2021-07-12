@@ -15,11 +15,6 @@
     "deploy": "gatsby build && cp -pvr public/* ../ && git add ../ && git commit -m 'Deploy to production' && git push"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-regular-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
     "bootstrap": "^5.0.2",
     "gatsby": "^3.8.1",
     "gatsby-image": "^3.8.0",
