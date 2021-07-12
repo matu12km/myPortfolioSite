@@ -7,7 +7,9 @@ const AboutImg = ({ filename, alt }) => (
   <StaticQuery
     query={graphql`
       {
-        images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+        media: allFile(
+          filter: { sourceInstanceName: { eq: "media" }, relativeDirectory: { ne: "iconsSvg" } }
+        ) {
           edges {
             node {
               relativePath

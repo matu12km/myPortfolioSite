@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
-import IconFont from '../Image/FontAwesomeIcon';
+import IconSvg from '../Image/IconSvg';
 
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
@@ -13,7 +13,7 @@ const Footer = () => {
       <Container>
         <span className="back-to-top">
           <Link to="hero" smooth duration={1000}>
-            <IconFont iconstyle="fas" iconname="chevron-circle-up" className="upArrow" />
+            <IconSvg name="arrow" size={20} color="#fff" transform="rotate(180)" />
           </Link>
         </span>
         <div className="social-links">
@@ -28,7 +28,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label={name}
                 >
-                  <IconFont iconstyle="fab" iconname={name} className="footerSocialIcon" />
+                  <IconSvg name={name} size={20} color="#fff" />
                 </a>
               );
             })}

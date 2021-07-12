@@ -21,7 +21,7 @@ const Skills = () => {
                 <Col className="mb-5" key={id} lg={2} sm={4} xs={4}>
                   <div className="skills-wrapper">
                     <IconImg alt={name} iconname={icon} width={30} height={30} />
-                    <h4 className="skills-name">{name || ''}</h4>
+                    <p className="skills-name h4">{name || ''}</p>
                     <ReactStarsRating
                       className="skillRating"
                       value={level}

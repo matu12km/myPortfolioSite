@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 // HEAD DATA
 export const headData = {
   title: 'ポートフォリオ|Matsuzawa Kazuki', // e.g: 'Name | Developer'
-  lang: 'jp', // e.g: en, es, fr, jp
+  lang: 'ja', // e.g: en, es, fr, ja
   description: 'マツザワのポートフォリオサイトです。', // e.g: Welcome to my website
 };
 

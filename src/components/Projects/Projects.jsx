@@ -4,7 +4,7 @@ import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
-import FontIcon from '../Image/FontAwesomeIcon';
+import IconSvg from '../Image/IconSvg';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -95,7 +95,7 @@ const Projects = () => {
             <Modal.Header>
               <Modal.Title>{imgTitle}</Modal.Title>
               <Button variant="light" onClick={handleClose}>
-                <FontIcon iconstyle="fas" iconname="times" className="close-btn" />
+                <IconSvg name="close" size="1rem" color="#000" />
               </Button>
             </Modal.Header>
             <Modal.Body>

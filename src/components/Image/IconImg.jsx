@@ -6,7 +6,7 @@ const IconImg = ({ className, iconname, alt, width, height }) => (
   <StaticQuery
     query={graphql`
       {
-        iconsSvg: allFile(filter: { sourceInstanceName: { eq: "iconsSvg" } }) {
+        iconsSvg: allFile(filter: { sourceInstanceName: { eq: "media/iconsSvg" } }) {
           edges {
             node {
               publicURL

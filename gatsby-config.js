@@ -42,18 +42,12 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-perf-budgets',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `iconsSvg`,
-        path: `${__dirname}/src/iconsSvg/`,
+        name: `media`,
+        path: `${__dirname}/src/media/`,
       },
     },
     {
@@ -72,18 +66,18 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#02aab0`,
         display: `minimal-ui`,
-        icon: 'src/images/favicon.png',
+        icon: 'src/media/favicon.png',
         icon_options: {
           purpose: `any maskable`,
         },
         icons: [
           {
-            src: `src/images/favicon.png`,
+            src: `src/media/favicon.png`,
             sizes: `512x512`,
             type: `image/png`,
           },
           {
-            src: `src/images/favicon.png`,
+            src: `src/media/favicon.png`,
             sizes: `256x256`,
             type: `image/png`,
           },
@@ -104,17 +98,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://matsuzawa.dev/`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {
           '/*.html': ['cache-control: public, max-age=0, must-revalidate'],
-          '/page-data/**/app-data.json': ['cache-control: public, max-age=0, must-revalidate'],
+          '/page-data/app-data.json': ['cache-control: public, max-age=0, must-revalidate'],
           '/page-data/*': ['cache-control: public, max-age=0, must-revalidate'],
           '/static/*': ['cache-control: public, max-age=31536000, immutable'],
           '/icons/*': ['cache-control: public, max-age=31536000, immutable'],

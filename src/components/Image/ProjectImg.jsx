@@ -7,7 +7,7 @@ const ProjectImg = ({ filename, alt, category, title }) => (
   <StaticQuery
     query={graphql`
       {
-        images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+        media: allFile(filter: { sourceInstanceName: { eq: "media" } }) {
           edges {
             node {
               relativePath
@@ -30,7 +30,7 @@ const ProjectImg = ({ filename, alt, category, title }) => (
         <div className="projectImgBox">
           <GatsbyImage image={imageFluid} alt={alt} />
           <p>{category}</p>
-          <h4>{title}</h4>
+          <p className="h4">{title}</p>
         </div>
       );
     }}
