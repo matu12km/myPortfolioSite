@@ -1,28 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Arrow = ({ size, color }, props) => (
+const Arrow = ({ size, color }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 48 48"
+    viewBox="0 0 50 50"
     width={size}
     height={size}
-    fill={color}
-    {...props}
+    color={color}
   >
-    <path fill="none" d="M0 0H48V48H0z" />
-    <path
-      fill="none"
-      stroke="#000"
+    <polyline
+      points="5,40 25,10 45,40"
+      strokeWidth="5"
+      stroke="#fff"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="4"
-      d="M16.5 37.23l17-12.71a.63.63 0 000-1l-17-12.71"
+      fill="none"
     />
   </svg>
 );
 Arrow.propTypes = {
-  size: PropTypes.number,
+  size: PropTypes.string,
   color: PropTypes.string,
 };
 

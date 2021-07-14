@@ -3,17 +3,19 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const ProjectImg = ({ filename, alt, category, title }) => (
+const ProjectImg = ({ filename, alt, category }) => (
   <StaticQuery
     query={graphql`
       {
-        media: allFile(filter: { sourceInstanceName: { eq: "media" } }) {
+        media: allFile(
+          filter: { sourceInstanceName: { eq: "media" }, relativeDirectory: { ne: "iconsSvg" } }
+        ) {
           edges {
             node {
               relativePath
               name
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.3)
+                gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.7)
               }
             }
           }
@@ -21,7 +23,7 @@ const ProjectImg = ({ filename, alt, category, title }) => (
       }
     `}
     render={(data) => {
-      const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
+      const image = data.media.edges.find((n) => n.node.relativePath.includes(filename));
 
       if (!image) return null;
 
@@ -30,7 +32,6 @@ const ProjectImg = ({ filename, alt, category, title }) => (
         <div className="projectImgBox">
           <GatsbyImage image={imageFluid} alt={alt} />
           <p>{category}</p>
-          <p className="h4">{title}</p>
         </div>
       );
     }}
@@ -41,7 +42,6 @@ ProjectImg.propTypes = {
   filename: PropTypes.string,
   alt: PropTypes.string,
   category: PropTypes.string,
-  title: PropTypes.string,
 };
 
 export default ProjectImg;

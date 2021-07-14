@@ -13,7 +13,7 @@ const Footer = () => {
       <Container>
         <span className="back-to-top">
           <Link to="hero" smooth duration={1000}>
-            <IconSvg name="arrow" size={20} color="#fff" transform="rotate(180)" />
+            <IconSvg name="arrow" size="20" color="#fff" />
           </Link>
         </span>
         <div className="social-links">
@@ -28,7 +28,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label={name}
                 >
-                  <IconSvg name={name} size={20} color="#fff" />
+                  <IconSvg name={name} size="20" color="#fff" />
                 </a>
               );
             })}

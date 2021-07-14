@@ -25,7 +25,7 @@ const Twitter = ({ size, color }) => (
   </svg>
 );
 Twitter.propTypes = {
-  size: PropTypes.number,
+  size: PropTypes.string,
   color: PropTypes.string,
 };
 
