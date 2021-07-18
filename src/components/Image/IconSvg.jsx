@@ -5,6 +5,7 @@ import Twitter from '../svgicon/twitter';
 import Instagram from '../svgicon/instagram';
 import Arrow from '../svgicon/arrow';
 import Close from '../svgicon/close';
+import Github from '../svgicon/github';
 
 const FontIcon = ({ name, size, color }) => {
   switch (name) {
@@ -16,6 +17,8 @@ const FontIcon = ({ name, size, color }) => {
       return <Close size={size} color={color} />;
     case 'arrow':
       return <Arrow size={size} color={color} />;
+    case 'github':
+      return <Github size={size} color={color} />;
     default:
       return '';
   }

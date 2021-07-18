@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function CloseIcon({ size, color }) {
+function Close({ size, color }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@ function CloseIcon({ size, color }) {
     </svg>
   );
 }
-CloseIcon.propTypes = {
+Close.propTypes = {
   size: PropTypes.string,
   color: PropTypes.string,
 };
 
-export default CloseIcon;
+export default Close;

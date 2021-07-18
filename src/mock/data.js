@@ -7,14 +7,6 @@ export const headData = {
   description: 'マツザワのポートフォリオサイトです。', // e.g: Welcome to my website
 };
 
-// HERO DATA
-export const heroData = {
-  title: '',
-  name: 'Matsuzawa',
-  subtitle: 'aaa',
-  cta: '',
-};
-
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
@@ -54,14 +46,14 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'myPortfolio.jpg',
     title: 'このサイト',
     category: 'WEBサイト制作',
     info: 'Gatsbyという静的サイトジェネレーターを使い作成。ホスティングはNetlifyを使用。WordPressよりも軽量！サイトのアップロードもFTPを使わなくてもいいので、管理が楽！',
     language: 'JavaScript, CSS, HTML, SASS',
     framework: 'React, Bootstrap',
     other: 'Gatsby',
-    url: '#',
+    url: 'https://matsuzawa.dev',
   },
 ];
 // SKILLS DATA
@@ -136,6 +128,12 @@ export const footerData = {
       name: 'instagram',
       icon: 'instagram.svg',
       url: 'https://www.instagram.com/k_matu12/?hl=ja',
+    },
+    {
+      id: nanoid(),
+      name: 'github',
+      icon: 'github.svg',
+      url: 'https://github.com/matu12km',
     },
   ],
 };

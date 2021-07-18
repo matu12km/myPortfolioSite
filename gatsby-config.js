@@ -40,7 +40,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
     'gatsby-plugin-image',
-    'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-perf-budgets',
     {

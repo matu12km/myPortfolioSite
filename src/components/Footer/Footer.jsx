@@ -16,6 +16,7 @@ const Footer = () => {
             <IconSvg name="arrow" size="20" color="#fff" />
           </Link>
         </span>
+        <p className="footer__text">My Social Links</p>
         <div className="social-links">
           {networks &&
             networks.map((network) => {
@@ -34,7 +35,7 @@ const Footer = () => {
             })}
         </div>
         <hr />
-        <p className="footer__text">© {new Date().getFullYear()} - created by Matsuzawa Kazuki</p>
+        <p className="footer__text">© {new Date().getFullYear()} - created by Matsuzawa</p>
       </Container>
     </footer>
   );

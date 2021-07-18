@@ -47,19 +47,15 @@
     }
   }
 
-  .hero-cta {
-    display: flex;
-
-    @include respond(tab-port) {
-      justify-content: center;
-    }
-
-    & a {
-      font-size: 2.4rem;
-
-      @include respond(phone) {
-        font-size: 2rem;
-      }
+  span {
+    margin-left: .5rem;
+    border-right: .09em solid #000;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
     }
   }
 }
