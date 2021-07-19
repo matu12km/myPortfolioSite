@@ -6,7 +6,8 @@ import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { name, age, paragraphOne, paragraphTwo, paragraphThree, paragraphFour } = about;
+  const { name, age, paragraphOne, paragraphTwo, paragraphThree, paragraphFour, paragraphFive } =
+    about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -46,6 +47,7 @@ const About = () => {
                 <p className="about-wrapper__info-text">{paragraphTwo || '2行目'}</p>
                 <p className="about-wrapper__info-text">{paragraphThree || '3行目'}</p>
                 <p className="about-wrapper__info-text">{paragraphFour || '4行目'}</p>
+                <p className="about-wrapper__info-text">{paragraphFive || '5行目'}</p>
               </div>
             </Fade>
           </Col>
